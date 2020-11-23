@@ -1,0 +1,89 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* clears and defaults */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: #f33;
+}
+
+/* mobile first */
+nav {
+    background-color: #111;
+}
+nav > .row {
+    display: flex;
+    align-items: center;
+    
+    padding: .5em;
+}
+    #logo_img {
+        width: 4em;
+        height: 4em;
+    }
+    nav > .row > .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        
+        width: 100%;
+
+        font-size: .8em;
+    }
+    nav > .row > .contact > a {
+        margin: .5em 0;
+
+    }
+    nav > .row > .contact span {
+        margin: 0 .5em;
+    }
+
+    nav > ul {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        list-style: none;
+    }
+    nav li {
+        display: inline;
+        padding: .5em;
+    }
+    nav li > a {
+        margin: 0 .5em;
+    }
+    nav li > a:hover {
+        border-bottom: 2px solid #f33;
+    }
+
+
+/* Tablet and desktop */
+@media(min-width: 720px) {
+    nav {
+        display: grid;
+        grid-template-columns: 2fr 6fr 2fr;
+    }
+        #logo_img {
+            width: 5em;
+            height: 5em;
+        }
+        nav > .row {
+            grid-column: 1/4;
+            grid-row: 1/auto;
+        }
+        nav > ul {
+            grid-column: 2/3;
+            grid-row: 1/auto;
+
+            align-items: center;
+        }
+            nav li > a {
+                margin: 0 1.5em;
+            }
+}
